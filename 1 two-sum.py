@@ -1,10 +1,11 @@
 class Solution(object):
     def twoSum(self, nums, target):
         map = {}
-        for k, v in enumerate(nums):
+        
+        for i, v in enumerate(nums):
             rest = target - v
             
             if rest in map:
-                return [map[rest], k]
-            
-            map[v] = k
+                return [map[rest], i]
+                
+            map[v] = i
